@@ -10,4 +10,4 @@ class Message(models.Model):
 #建立資料模型 user=名字 subject=主題 context=內容 created=留言時間
     
     def __str__(self):
-        return self.subject #定義__str__
+        return self.subject,self.content,self.user #定義__str__

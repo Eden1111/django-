@@ -6,4 +6,5 @@ urlpatterns=[
     path('<int:pk>/', MessageView.as_view(), name='msg_view'),#留言內容
     path('create/', MessageCreate.as_view(), name='msg_create'),#建立留言
     path('<int:pk>/delete/', MessageDelete.as_view(), name='msg_delete'),#刪除留言
+    path('<int:pk>/update',MessageUpdate.as_view(),name='msg_update'),#修改留言
 ]
