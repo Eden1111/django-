@@ -6,6 +6,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin #檢測用戶是否登
 
 # Create your views here.
 
+#ListView、DetailView、CreateView、DeleteView會開啟在app名/template/app名/對應的.html
+
 class MessageList(ListView):
     model = Message
     ordering = ['-id'] #以id值反向排序

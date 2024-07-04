@@ -11,7 +11,7 @@
     <a href="/">首頁</a>
     <a href="{% url 'msg_create' %}">新增留言</a>
     {% if user.is_authenticated %} <!--判斷是否登入-->
-      {{ user.username }}  <!--顯示用戶名稱-->
+      user:{{ user.username }}  <!--顯示用戶名稱-->
       <form action="{% url 'logout' %}" method="post"> 
         {% csrf_token %}
         <button type="submit">登出</button>
