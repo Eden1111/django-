@@ -6,6 +6,9 @@
   <li>
     {{ msg.created }}
     <a href="{% url 'msg_view' msg.id %}">{{ msg.subject }}</a>
+    {% if user.is_authenticated %} <!--判斷是否登入-->
+      | <a href="{% url 'msg_delete' msg.id %}">刪除</a> <!--如果有登入就多刪除按鈕-->
+    {% endif %}    
   </li>
   {% endfor %}
 </ul>
