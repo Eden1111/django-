@@ -11,4 +11,6 @@ def MessageList(ListView):
 def MessageViews(DetailView):
     models=messages
 def MessageCreat(CreateView):
-    CreateView
+    models=messages
+    fields = ['user','subject','content']
+    success_url = reverse_lazy('msg_list')
