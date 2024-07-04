@@ -5,12 +5,12 @@ from .models import *
 
 # Create your views here.
 
-def MessageList(ListView):
-    models = messages
-    ordering = ['-id']
-def MessageViews(DetailView):
-    models=messages
-def MessageCreat(CreateView):
-    models=messages
-    fields = ['user','subject','content']
-    success_url = reverse_lazy('msg_list')
+class MessageList(ListView):
+    model = Message
+    ordering = ['-id'] #以id值反向排序
+class MessageView(DetailView):
+    model = Message
+class MessageCreate(CreateView):
+    model = Message
+    fields = ['user', 'subject', 'content'] #顯示'user','subject','content'
+    success_url = reverse_lazy('msg_list')#新增後導向留言列表(/message)
