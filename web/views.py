@@ -21,11 +21,11 @@ class MessageCreate(CreateView):
     fields = ['user', 'subject', 'content'] #顯示'user','subject','content'
     success_url = reverse_lazy('msg_list') #新增後導向留言列表(/message)
 # 刪除留言
-class MessageDelete(LoginRequiredMixin,DeleteView): #LoginRequiredMixin需要登入
+class MessageDelete(LoginRequiredMixin,DeleteView): #LoginRequiredMixin需要登入才能刪除
     model = Message
     success_url = reverse_lazy('msg_list') #刪除後導向留言列表(/message)
 #修改留言
-class MessageUpdate(LoginRequiredMixin,UpdateView): #修改留言
+class MessageUpdate(LoginRequiredMixin,UpdateView): #修改留言(需要登入)
     model = Message
     fields=['subject', 'content'] #顯示'content'
     success_url = reverse_lazy('msg_list') #修改後導向留言列表(/message)
