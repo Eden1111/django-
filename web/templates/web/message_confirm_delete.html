@@ -3,8 +3,9 @@
 {% block content %}
 <h2>刪除記錄</h2>
 <p>您確定要刪除「{{ object.subject }}」這筆記錄嗎?</p>
+<a href="http://localhost/"><button>算了，回到首頁</button></a> <!--用<a href='xxx'></a>包住<button></button>讓按鈕有超連結但不會變成藍色-->
 <form action="" method="POST">
   {% csrf_token %}
-  <input type="submit" action="" value="是的，我要刪除" />
+  <input type="submit" action="" value="是的，我要刪除" /> <!--刪除鈕 導向""(http://localhost/)-->
 </form>
 {% endblock %}

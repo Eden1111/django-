@@ -25,6 +25,7 @@ SECRET_KEY = 'django-insecure-cm$)7=8w@qsr6at5!ox(nx)a(3le5s=&x!(vo#1ns6^%76fqne
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+#網址
 ALLOWED_HOSTS = ['*']
 
 
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'web',
 ]
 
+#使用的應用程式(先用python manage.py startapp 名稱 建立應用程式在加到這裡)
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -104,8 +106,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
+#語言
 LANGUAGE_CODE = 'zh-hant'
 
+#時區
 TIME_ZONE = 'Asia/Taipei'
 
 USE_I18N = True
@@ -126,5 +130,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # 登入後重新導向首頁 (預設會導向 /accounts/profile/)
 LOGIN_REDIRECT_URL = '/'
 
-# 登出後重新導向首頁
+# 登出後重新導向首頁 
 LOGOUT_REDIRECT_URL = '/'

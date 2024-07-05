@@ -3,7 +3,7 @@
 {% block content %}
 <form action="" method="post">
   {% csrf_token %}
-  {{ form.as_p }}
+  {{ form.as_p }}    <!--創建登入表單-->
   <div>
     <input type="submit" value="登入">
   </div>

@@ -7,17 +7,17 @@
 </head>
 <body>
   <h1>留言板</h1>
-  <div>
-    <a href="/">首頁</a>
-    <a href="{% url 'msg_create' %}">新增留言</a>
+  <div>                                                  
+    <a href="/"><button>回到首頁</button></a>             <!--href 超連結 (Hypertext Reference)-->
+    <a href="{% url 'msg_create' %}"><button>新增留言</button></a>
     {% if user.is_authenticated %} <!--判斷是否登入-->
-      user:{{ user.username }}  <!--顯示用戶名稱-->
+      歡迎{{ user.username }}  <!--顯示用戶名稱-->
       <form action="{% url 'logout' %}" method="post"> 
-        {% csrf_token %}
-        <button type="submit">登出</button>
+        {% csrf_token %}  <!--資料庫憑證 不放的話沒辦法讓資料進資料庫-->
+        <button type="submit">登出</button> <!--按鈕不一定要有作用-->
       </form>
     {% else %} <!--如果沒登入-->
-      <a href="{% url 'login' %}">登入</a> <!--登入-->
+      <a href="{% url 'login' %}"><button>登入</button></a> <!--登入按鈕-->
     {% endif %}    
   </div>
   <div>{% block content %}{% endblock %}</div>
