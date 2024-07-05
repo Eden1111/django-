@@ -4,8 +4,8 @@ from django.db import models
 
 #class 資料庫名稱(models.Model) 創建django內建的資料庫類型
 class Message(models.Model): 
-    user = models.CharField('姓名',max_length=10000000)
-    subject = models.CharField('主題',max_length=10000000)
+    user = models.CharField('姓名',max_length=10000000000000000000000000000000)
+    subject = models.CharField('主題',max_length=100000000000000000000000000000)
     content = models.TextField('內容')
     created = models.DateTimeField('留言時間',auto_now_add=True)
 #建立資料模型 user=名字 subject=主題 context=內容 created=留言時間 此資料庫有四個欄位

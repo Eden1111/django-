@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import *
-from django.contrib.auth.mixins import LoginRequiredMixin #檢測用戶是否登入
+from django.contrib.auth.mixins import LoginRequiredMixin #LoginRequiredMixin檢測用戶是否登入(需要登入才能用)
 
 # Create your views here.
 
